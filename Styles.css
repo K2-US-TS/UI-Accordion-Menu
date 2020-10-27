@@ -1,0 +1,111 @@
+<style>
+
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+@import url(https://immersiononk2.blob.core.windows.net/files/css/Themes/FontAwesome/css/all.css);
+
+* {margin: 0; padding: 0;}
+
+#accordion {
+	background: var(--menu-bgColor);
+	width: var(--menu-width);
+	margin: 0px;
+	padding: 0px;
+	white-space: normal;
+	font-family: "Nunito";
+	x-box-shadow: 
+		0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+		0 0 200px 1px rgba(255, 255, 255, 0.5);
+}
+
+#accordion .itemtitle {
+	background: var(--menu-title-bgColor); 
+	background: linear-gradient(var(--menu-bgColor-gradient-start,--menu-title-bgColor), var(--menu-bgColor-gradient-end,--menu-title-bgColor ));
+	border-bottom: 1px solid var(--menu-title-border-color);
+}
+#accordion h3 a {
+	padding: 0 10px;
+	font-size: var(--menu-item-font-size);
+	line-height: var(--menu-title-line-height);
+	display: block;
+	color: var(--menu-title-font-color);
+	text-decoration: none;
+}
+
+#accordion h3:hover {
+	text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+}
+
+#accordion h3 span {
+	font-size: var(--menu-title-font-size);
+	margin-right: 10px;
+        color: var(--menu-title-font-color);
+}
+
+#accordion li {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+	white-space: none !important;
+}
+
+
+#accordion ul ul li a, #accordion h4 {
+	color: var(--menu-font-color);
+	text-decoration: none;
+	font-size: var(--menu-item-font-size);
+	line-height: var(--menu-item-line-height);
+	display: block;
+	padding: 0 15px;
+
+	transition: all 0.15s;
+	position: relative;
+}
+
+#accordion ul ul li a:hover {
+	background: var(--menu-hover-bgColor);
+	border-right: var(--menu-selected-border-width) solid var(--menu-selected-font-color);
+	color: var(--menu-hover-font-color);
+}
+
+#accordion ul ul {
+	display: none;
+}
+#accordion li.active>ul {
+	display: block;
+}
+
+#accordion ul ul ul{
+	margin-left: 15px; 
+	border-left: 1px 
+	dotted rgba(0, 0, 0, 0.5);
+}
+
+#accordion a:not(:only-child):after {
+	content: "\f105";
+	font-weight: 900;
+	font-family: "Font Awesome 5 Free";
+	position: absolute; right: 10px; top: 0;
+	font-size: var(--menu-item-font-size);
+}
+#accordion .active>a:not(:only-child):after {
+	content: "\f107";
+	font-weight: 900;
+	font-size: var(--menu-item-font-size);
+}
+
+.menu_selected {
+	background: var(--menu-hover-bgColor);
+	border-right: var(--menu-selected-border-width) solid var(--menu-selected-font-color);
+	color: var(--menu-selected-font-color)!important;
+}
+
+.menu_selected span {
+	color: var(--menu-selected-font-color)!important;
+}
+
+.headerIcon {
+	width: var(--menu-icon-size);
+	font-size: var(--menu-icon-size);
+}
+
+</style>
